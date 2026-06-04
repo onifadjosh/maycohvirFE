@@ -1,13 +1,16 @@
-import React from 'react'
+import React from "react";
 
-const Button = () => {
+const Button = ({title, color, func}) => {
+  // console.log(props);
 
-    const shout =(name)=>{
-        alert(`I am shoutingggggggg ${name}`)
-    }
+  const shout = (name) => {
+    alert(`I am shoutingggggggg ${name}`);
+  };
   return (
-    <button className='btn btn-success ' onClick={()=>shout("Pampam")}>Buy me</button>
-  )
-}
+    <button className={` btn ${color} `} onClick={func}>
+      {title}
+    </button>
+  );
+};
 
-export default Button
+export default Button;
