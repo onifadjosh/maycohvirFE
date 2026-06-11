@@ -145,6 +145,9 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Navbar from './components/Navbar'
 import Notfound from './pages/Notfound'
+import Profile from './pages/Profile'
+import MakeEffect from './pages/MakeEffect'
+import Formikk from './pages/Formikk'
 
 const App = () => {
   return (
@@ -157,6 +160,15 @@ const App = () => {
 
           {/* programmatic redirection */}
           <Route path='/info' element={<Navigate to={"/contact"}/>}/>
+
+          <Route path='/makeeffect' element={<MakeEffect/>}/>
+          <Route path='/formikk' element={<Formikk/>}/>
+
+          {/* dynamic routing */}
+          <Route path='/profile/:username' element={<Profile/>}/>
+
+          {/* assignment1 */}
+          {/* children and nested routes */}
 
           {/* wild card routing */}
           <Route path='*' element={<Notfound/>}/>
