@@ -36,7 +36,7 @@ const Formikk = () => {
       console.log(values);
       try {
         const response = await axios.post(
-          "http://localhost:5009/api/v1/register",
+          `${import.meta.env.VITE_BASE_URL}/api/v1/register`,
           {
             firstName: formik.values.firstname,
             lastName: formik.values.lastname,
